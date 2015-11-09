@@ -4,14 +4,36 @@ import android.support.v7.app.ActionBarActivity;
 import android.os.Bundle;
 import android.view.Menu;
 import android.view.MenuItem;
+import android.view.View;
+import android.widget.Button;
 
 
 public class Signout extends ActionBarActivity {
-
+//Oh my god. I must name it Signin.
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_signout);
+
+        Button loginBtn = (Button) findViewById(R.id.login);
+        loginBtn.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                //this button shows the main activity
+                //using thread to check the id and pw
+                //then show the main activity and finish this activity
+
+                finish();
+            }
+        });
+
+        Button signBtn = (Button) findViewById(R.id.signup);
+        signBtn.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                //signup operation would be activated later
+            }
+        });
     }
 
     @Override
